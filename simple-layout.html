@@ -1,13 +1,66 @@
-1  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flexable Flex</title>
+    <style>
+        .box{
+            background-color: bisque;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            
+        }
+        .container{
+            display: flex;
+            gap: 10px;
+            
+            
+        }
+        
+            @media screen and (max-width:576px) {
+                .container{
+                    flex-direction: column;
+                    
+                }
+            }
+            @media screen and (min-width:576px) and (max-width:992px) {
+                 .container{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    background-color: black;
+                 }
+                 .box{
+                    background-color: thistle;
+                    
+                 }
+            }
+        
+    </style>
 </head>
 <body>
-    <div>
-        
-    </div>
+    
+        <h2>Flexable Flex</h2>
+               
+        <div class="container">
+            <div class="box">
+                <h2>First Box</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, deleniti dicta assumenda nam molestias consequatur autem labore asperiores voluptas architecto dolorum reprehenderit, mollitia laborum, voluptate quas doloribus! Accusantium, reprehenderit velit.</p>
+            </div>
+            <div class="box">
+                <h2>Second Box</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quae maxime est impedit optio sequi sint eveniet dolorum dolorem saepe? Quasi, explicabo excepturi! Soluta minus illum voluptas architecto adipisci nisi.</p>
+            </div>
+            <div class="box">
+                <h2>Third Box</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ad consequatur est maxime fugiat eligendi quibusdam placeat tempore animi, provident corporis dolore ipsum veritatis ex. Ipsam pariatur aliquam reiciendis consectetur.</p>
+            </div>
+            <div class="box">
+                <h2>Fourth Box</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ad consequatur est maxime fugiat eligendi quibusdam placeat tempore animi, provident corporis dolore ipsum veritatis ex. Ipsam pariatur aliquam reiciendis consectetur.</p>
+            </div>
+        </div>
+    
 </body>
 </html>
